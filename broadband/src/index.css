@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body{
+  background-color: #EAEDF4;
+}
+
 :root {
   /*=======Scroll bar colors=======*/
   --scroll-bar-color: #c5cadf;
