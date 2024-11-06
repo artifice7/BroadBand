@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
+import AboutSection from "./AboutSection";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
           <h1 className="text-xl font-bold">Welcome to the Home Page</h1>
           <p>This is the home page of the broadband application.</p>
         </div>
+        <AboutSection /> {/* Add this line to render the AboutSection component */}
       </div>
     </>
   );
