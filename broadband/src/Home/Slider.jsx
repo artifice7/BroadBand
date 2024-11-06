@@ -1,8 +1,5 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,7 +15,7 @@ export default function App() {
       <Swiper
         cssMode={true}
         navigation={true}
-        pagination={true}
+        pagination={false}
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
@@ -26,15 +23,16 @@ export default function App() {
       >
         <SwiperSlide>
           <div className="relative bg-[#EAEDF4] max-w-[1712px] mx-auto pt-24 px-8 pb-8">
-            <div className="relative flex flex-col md:flex-row items-center mt-10 md:mt-10">
+            <div className="relative mr-10 flex flex-col md:flex-row items-center mt-10 md:mt-10">
               {/* Left Text Content */}
-              <div className="md:w-1/2 lg:w-3/5 md:pl-10 relative flex flex-col justify-between">
+              <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 relative flex flex-col justify-between">
                 {/* Text Paragraph */}
                 <div className="relative flex-1 ">
-                  <h1 className="text-lg sm:text-xl md:text-6xl font-bold text-black mb-4 z-20 relative  ">
-                    Now get double speed in single price
+                  <h1 className="text-lg sm:text-xl md:text-6xl max-w-[700px] font-bold text-black mb-4 z-20 relative font-gentle">
+                    Now get double speed in{" "}
+                    <span className="text-[#040B9B]">single price</span>
                   </h1>
-                  <p className="relative text-xl sm:text-lg md:text-lg mb-7">
+                  <p className="relative text-xl sm:text-lg md:text-lg mb-7 max-w-[700px]">
                     Now enjoy uniterrupted broadbad wi-fi for you and your
                     family at the best in class prices and dedicated customer
                     service
@@ -43,7 +41,7 @@ export default function App() {
                 <Button1>Browse Plans</Button1>
               </div>
               {/* Left Image */}
-              <div className="z-30 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0 relative">
+              <div className="z-30 ml-10 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0 relative">
                 <img
                   src="/V-1.png"
                   alt="About Us"
@@ -52,26 +50,27 @@ export default function App() {
               </div>
             </div>
           </div>
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-1 font-medium">
+            <p>Scroll Down</p>
+            <span className="text-blue-600 text-3xl">↓</span>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative bg-[#EAEDF4] max-w-[1712px] mx-auto pt-24 px-8 pb-8">
             <div className="relative flex flex-col md:flex-row items-center mt-10 md:mt-10">
               {/* Left Text Content */}
-              <div className="md:w-1/2 lg:w-3/5 md:pl-10 relative flex flex-col justify-between">
+              <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 relative flex flex-col justify-between">
                 {/* Text Paragraph */}
                 <div className="relative flex-1 ">
-                  <p className="relative text-xl sm:text-lg md:text-lg mb-7">
-                    Welcome to AKASH BROADBAND in Porbandar! 🌐 We are committed
-                    to providing fast, reliable internet services tailored to
-                    meet your needs. Our mission is to keep you connected to
-                    what matters most, whether you’re working from home 💻,
-                    streaming your favorite shows 🎬, or enjoying online gaming
-                    🎮.
+                  <h1 className="text-lg sm:text-xl md:text-6xl max-w-[700px] font-bold text-black mb-4 z-20 relative font-gentle">
+                    Unlimited Wi-fi For Everyone
+                  </h1>
+                  <p className="relative text-xl sm:text-lg md:text-lg mb-7 max-w-[700px]">
+                    Now enjoy uniterrupted broadbad wi-fi for you and your
+                    family at the best in class prices and dedicated customer
+                    service
                   </p>
                 </div>
-                <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-4 z-20 relative">
-                  Why Choose Us?
-                </h1>
                 <Button1>Browse Plans</Button1>
               </div>
 

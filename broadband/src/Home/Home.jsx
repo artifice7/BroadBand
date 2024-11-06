@@ -1,7 +1,7 @@
-import React from "react";
 import AboutSection from "./AboutSection";
 import Slider from "./Slider";
 import Navbar from "../components/Navbar"; // Add this line to import the Navbar component
+import OurPlans from "./OurPlans";
 
 const Home = () => {
   return (
@@ -12,6 +12,7 @@ const Home = () => {
         <AboutSection />{" "}
         {/* Add this line to render the AboutSection component */}
       </div>
+      <OurPlans />
     </>
   );
 };

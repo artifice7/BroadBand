@@ -2,7 +2,7 @@
     width: 8em;
     height: 2.3em;
     margin: 0.5em;
-    background: #3572EF;
+    background: #3572ef;
     color: white;
     border: none;
     border-radius: 0.3em;
@@ -12,13 +12,13 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-   }
-   
-   button:hover {
-    color: #3572EF;
-   }
-   
-   button:after {
+}
+
+.btn:hover {
+    color: #3572ef;
+}
+
+.btn:after {
     content: "";
     background: white;
     position: absolute;
@@ -29,10 +29,10 @@
     bottom: 0;
     transform: skewX(-45deg) scale(0, 1);
     transition: all 0.5s;
-   }
-   
-   button:hover:after {
+}
+
+.btn:hover:after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-   }
+}
