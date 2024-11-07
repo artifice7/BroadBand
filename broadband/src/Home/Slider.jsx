@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./styles.css";
 import Button1 from "../Buttons/button1";
+import "../index.css";
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
@@ -21,6 +21,10 @@ export default function App() {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper bg-[#EAEDF4] "
       >
+        <link
+          href="https://fonts.cdnfonts.com/css/made-gentle"
+          rel="stylesheet"
+        />
         <SwiperSlide>
           <div className="relative bg-[#EAEDF4] max-w-[1712px] mx-auto pt-24 px-8 pb-8">
             <div className="relative mr-10 flex flex-col md:flex-row items-center mt-10 md:mt-10">
@@ -28,9 +32,12 @@ export default function App() {
               <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 relative flex flex-col justify-between">
                 {/* Text Paragraph */}
                 <div className="relative flex-1 ">
-                  <h1 className="text-lg sm:text-xl md:text-6xl max-w-[700px] font-bold text-black mb-4 z-20 relative font-gentle">
+                  <h1
+                    className="text-lg sm:text-xl md:text-6xl max-w-[700px] text-black mb-4 z-20 relative "
+                    style={{ fontFamily: "MADE Gentle, sans-serif" }}
+                  >
                     Now get double speed in{" "}
-                    <span className="text-[#040B9B]">single price</span>
+                    <span className="text-[#050C9C]">single price</span>
                   </h1>
                   <p className="relative text-xl sm:text-lg md:text-lg mb-7 max-w-[700px]">
                     Now enjoy uniterrupted broadbad wi-fi for you and your
@@ -51,19 +58,25 @@ export default function App() {
             </div>
           </div>
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-1 font-medium">
-            <p>Scroll Down</p>
-            <span className="text-blue-600 text-3xl">↓</span>
+            <a href="#about" className="scroll-down">
+              Scroll Down{" "}
+              <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
+            </a>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative bg-[#EAEDF4] max-w-[1712px] mx-auto pt-24 px-8 pb-8">
-            <div className="relative flex flex-col md:flex-row items-center mt-10 md:mt-10">
+            <div className="relative mr-10 flex flex-col md:flex-row items-center mt-10 md:mt-10">
               {/* Left Text Content */}
               <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 relative flex flex-col justify-between">
                 {/* Text Paragraph */}
                 <div className="relative flex-1 ">
-                  <h1 className="text-lg sm:text-xl md:text-6xl max-w-[700px] font-bold text-black mb-4 z-20 relative font-gentle">
-                    Unlimited Wi-fi For Everyone
+                  <h1
+                    className="text-lg sm:text-xl md:text-6xl max-w-[700px] text-black mb-4 z-20 relative "
+                    style={{ fontFamily: "MADE Gentle, sans-serif" }}
+                  >
+                    Unlimited Wi-fi For{" "}
+                    <span className="text-[#050C9C]">Everyone</span>
                   </h1>
                   <p className="relative text-xl sm:text-lg md:text-lg mb-7 max-w-[700px]">
                     Now enjoy uniterrupted broadbad wi-fi for you and your
@@ -83,6 +96,12 @@ export default function App() {
                 />
               </div>
             </div>
+          </div>
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-1 font-medium">
+            <a href="#about" className="scroll-down">
+              Scroll Down{" "}
+              <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
+            </a>
           </div>
         </SwiperSlide>
       </Swiper>
