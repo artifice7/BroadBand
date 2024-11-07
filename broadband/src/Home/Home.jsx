@@ -1,7 +1,12 @@
 import AboutSection from "./AboutSection";
 import Slider from "./Slider";
-import Navbar from "../components/Navbar"; // Add this line to import the Navbar component
+import Navbar from "../components/Navbar";
 import OurPlans from "./OurPlans";
+import PlansInfo from "./PlansInfo";
+import HelpSection from "./HelpSection";
+import FiberSection from "./FiberSection";
+import InfoSection from "./InfoSection";
+import TeamSection from "./TeamSection";
 
 const Home = () => {
   return (
@@ -10,9 +15,13 @@ const Home = () => {
       <Slider />
       <div className="relative max-w-[1712px] mx-auto pt-24 px-8 pb-8 ">
         <AboutSection />{" "}
-        {/* Add this line to render the AboutSection component */}
       </div>
       <OurPlans />
+      <PlansInfo />
+      <HelpSection />
+      <FiberSection />
+      <InfoSection />
+      <TeamSection />
     </>
   );
 };
