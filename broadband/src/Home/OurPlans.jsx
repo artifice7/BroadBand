@@ -6,7 +6,10 @@ import "swiper/css/navigation";
 const OurPlans = () => {
   return (
     <section className="py-10 mt-20">
-      <h3 className="flex justify-center text-[50px] mt-10 md:mt-10 "style={{ fontFamily: 'MADE Gentle, sans-serif' }}>
+      <h3
+        className="flex justify-center text-[50px] mt-10 md:mt-10 "
+        style={{ fontFamily: "MADE Gentle, sans-serif" }}
+      >
         Our Plans
       </h3>
       <p className="text-center text-2xl text-gray-500 mb-2">
@@ -28,7 +31,7 @@ const OurPlans = () => {
           }}
         >
           <SwiperSlide>
-            <div className="bg-white min-h-[750px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-2xl hover:border-0">
+            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-2xl hover:border-0">
               {/* Image */}
               <img
                 src="/30 Mbps.png"
