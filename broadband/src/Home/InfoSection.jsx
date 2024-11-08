@@ -7,7 +7,7 @@ const InfoSection = () => {
       <div className="lg:w-1/2 space-y-6">
         <h2
           style={{ fontFamily: "MADE Gentle, sans-serif" }}
-          className="text-3xl lg:text-5xl font-bold leading-snug"
+          className="text-3xl lg:text-5xl leading-snug"
         >
           We are no. 1 internet service provider company in{" "}
           <span className="text-[#040B9B]">Porbandar</span>

@@ -80,7 +80,7 @@ const TeamSection = () => {
       <div className="lg:w-1/2 space-y-6">
         <h2
           style={{ fontFamily: "MADE Gentle, sans-serif" }}
-          className="text-2xl lg:text-4xl font-bold text-gray-800 mb-20"
+          className="text-2xl lg:text-4xl text-gray-800 mb-20"
         >
           We’re committed to providing top-notch service at all times.
         </h2>

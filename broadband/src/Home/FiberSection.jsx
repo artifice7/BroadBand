@@ -20,11 +20,11 @@ const FiberSection = () => {
       <div className="text-center mb-8">
         <h2
           style={{ fontFamily: "MADE Gentle, sans-serif" }}
-          className="text-5xl font-bold text-gray-900"
+          className="text-5xl text-gray-900 mb-2"
         >
           Future-proof your home with fiber
         </h2>
-        <p className="text-[#3571EF]">
+        <p className="text-[#3571EF] text-xl mb-4">
           As technology advances and your online needs grow, our fiber-optic
           technology has you covered.
         </p>
