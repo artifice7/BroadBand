@@ -3,7 +3,7 @@ import "./contactus.css";
 
 const ContactUs = () => {
 return (
-    <button>CONTACT US</button>
+    <button className="contact" >CONTACT US</button>
 );
 };
 
