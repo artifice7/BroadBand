@@ -1,4 +1,4 @@
-.contact {
+.btn {
     width: 8em;
     height: 2.3em;
     margin: 0.5em;
@@ -14,11 +14,11 @@
     overflow: hidden;
 }
 
-.contact:hover {
+.btn:hover {
     color: #3572ef;
 }
 
-.contact:after {
+.btn:after {
     content: "";
     background: white;
     position: absolute;
@@ -31,7 +31,7 @@
     transition: all 0.5s;
 }
 
-.contact:hover:after {
+.btn:hover:after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
