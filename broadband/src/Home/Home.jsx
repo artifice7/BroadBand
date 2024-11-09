@@ -7,6 +7,7 @@ import HelpSection from "./HelpSection";
 import FiberSection from "./FiberSection";
 import InfoSection from "./InfoSection";
 import TeamSection from "./TeamSection";
+import FooterSection from "./FooterSection";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <FiberSection />
       <InfoSection />
       <TeamSection />
+      <FooterSection />
     </>
   );
 };
