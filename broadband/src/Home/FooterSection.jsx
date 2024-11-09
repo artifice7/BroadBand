@@ -13,7 +13,7 @@ const FooterSection = () => {
               className="h-12 w-52"
               alt="Flowbite Logo"
             />
-            <h3 className="text-lg font-semibold text-black">
+            <h3 className="text-2xl font-semibold text-black">
               Get In Touch With Us
             </h3>
             <p className="text-sm text-gray-600">
@@ -26,7 +26,7 @@ const FooterSection = () => {
 
           {/* Column 2: About Company */}
           <div className="w-full lg:border-r-2 pb-8 flex flex-col lg:items-center lg:text-center border-t-2 border-gray-300 pt-8 pr-5 lg:w-1/4 space-y-4">
-            <h3 className="text-lg font-semibold text-black">About Company</h3>
+            <h3 className="text-2xl font-semibold text-black">About Company</h3>
             <ul className="text-sm text-gray-600 space-y-2">
               <li>
                 <a href="#" className="hover:text-blue-500">
@@ -48,7 +48,7 @@ const FooterSection = () => {
 
           {/* Column 3: Contact Info */}
           <div className="w-full lg:border-r-2 flex flex-col lg:items-center pb-8 text-left border-t-2 border-gray-300 pt-8 pr-5 lg:w-1/4 space-y-6">
-            <h3 className="text-lg font-semibold text-black">Contact Info</h3>
+            <h3 className="text-2xl font-semibold text-black">Contact Info</h3>
 
             {/* Phone Section */}
             <div>
@@ -70,7 +70,7 @@ const FooterSection = () => {
               {/* Email Section */}
               <div className="flex items-start">
                 <img
-                  className="w-7 h-6 mr-4"
+                  className="w-8 h-6 mr-4"
                   src="/mail.png"
                   alt="Email Icon"
                 />
@@ -86,7 +86,7 @@ const FooterSection = () => {
 
           {/* Column 4: Office Timing */}
           <div className="w-full flex flex-col lg:items-center pb-8 border-t-2 border-gray-300 pt-8 pr-5 lg:w-1/4 space-y-4">
-            <h3 className="text-lg font-semibold text-black">Office Timing</h3>
+            <h3 className="text-2xl font-semibold text-black">Office Timing</h3>
             <ul className="text-sm text-gray-600 space-y-1">
               <li className="flex flex-col pb-2 justify-between">
                 <p>Monday - Friday</p>
@@ -104,7 +104,7 @@ const FooterSection = () => {
           </div>
         </div>
       </div>
-      <div className="text-center py-4 bg-[#131827] mt-4 text-white text-md">
+      <div className="text-center py-4 bg-[#141928] mt-4 text-white text-md">
         Copyrighted by <strong>@AKASH BROADBAND</strong> - All Rights Reserved
         Made By
         <span className="font-semibold"> Artifice Labs</span>

@@ -1,3 +1,6 @@
+import React from "react";
+import ContactUs from "../Buttons/contactus";
+
 const HelpSection = () => {
   return (
     <div className="bg-[#7DCDF8] py-20 px-6 mt-20">
@@ -12,9 +15,7 @@ const HelpSection = () => {
             Contact us to get personalized recommendations! Our team is here to
             help you choose the plan that best fits your needs.
           </p>
-          <button className="bg-[#7DCDF8] text-[#040B9B] font-extrabold py-2 px-6 rounded-full border-2 border-[#3571EF]">
-            CONTACT US
-          </button>
+          <ContactUs />
         </div>
       </div>
     </div>
