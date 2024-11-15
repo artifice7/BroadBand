@@ -2,12 +2,12 @@ import Button1 from "../Buttons/button1";
 
 const InfoSection = () => {
   return (
-    <section className="flex mt-20 flex-col lg:flex-row items-center justify-between p-8 lg:p-16 rounded-lg">
+    <section className="flex max-w-[1780px] mx-auto mt-20 flex-col lg:flex-row items-center justify-between p-8 lg:p-16 rounded-lg">
       {/* Left Text Section */}
       <div className="lg:w-1/2 space-y-6">
         <h2
           style={{ fontFamily: "MADE Gentle, sans-serif" }}
-          className="text-3xl lg:text-5xl leading-snug"
+          className="text-3xl lg:text-4xl leading-snug"
         >
           We are no. 1 internet service provider company in{" "}
           <span className="text-[#040B9B]">Porbandar</span>
@@ -57,7 +57,7 @@ const InfoSection = () => {
         <img
           src="/About-Last.jpg"
           alt="Girl using internet"
-          className="rounded-lg w-3/4 h-auto shadow-lg lg:min-h-[400px] object-cover"
+          className="rounded-lg w-3/4 h-auto shadow-lg lg:min-h-[550px] object-cover"
         />
       </div>
     </section>

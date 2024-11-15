@@ -19,7 +19,7 @@ const OurPlans = () => {
         Starting From ₹383 /months* with unlimited data
       </p>
 
-      <div className="relative w-full px-12">
+      <div className=" relative w-full px-12">
         <Swiper
           modules={[Navigation]}
           navigation={true}
