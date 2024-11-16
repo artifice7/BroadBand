@@ -1,6 +1,10 @@
 import { Instagram } from "react-feather";
 
 const FooterSection = () => {
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com", "_blank");
+  };
+
   return (
     <div className="mt-20">
       <div className="py-10 px-6 mx-auto">
@@ -19,9 +23,12 @@ const FooterSection = () => {
             <p className="text-sm text-gray-600">
               Nr. Dr. Bharat Shah Ravliya Plot, Porbandar 360575
             </p>
-            <a href="#" className="flex items-center">
+            <button
+              onClick={handleInstagramClick}
+              className="flex items-center"
+            >
               <Instagram className="mr-2" />
-            </a>
+            </button>
           </div>
 
           {/* Column 2: About Company */}
@@ -105,9 +112,12 @@ const FooterSection = () => {
         </div>
       </div>
       <div className="text-center py-4 bg-[#141928] mt-4 text-white text-md">
-        Copyrighted by <strong>@AKASH BROADBAND</strong> - All Rights Reserved
-        Made By
-        <span className="font-semibold"> Artifice Labs</span>
+        © 2024 <strong>AKASH BROADBAND 🌐</strong> - All rights reserved.
+        Website designed and developed by
+        <a href="https://www.artificelabs.com" className="font-semibold">
+          {" "}
+          Artifice Labs 💻✨
+        </a>
       </div>
     </div>
   );
