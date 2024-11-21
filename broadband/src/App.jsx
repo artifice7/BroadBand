@@ -1,9 +1,9 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./Home/Home";
-import About from "./pages/about";
-import Inquiry from "./pages/Inquiry";
-import PlansPage from "./pages/planspage";
+import About from "./Pages/About";
+import Inquiry from "./Pages/Inquiry";
+import PlansPage from "./Pages/PlansPage";
 
 function App() {
   return (

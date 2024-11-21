@@ -1,5 +1,6 @@
-import React from "react";
 import Navbar from "../components/Navbar";
+import TeamSection from "../Home/TeamSection";
+import FooterSection from "../Home/FooterSection";
 
 const Inquiry = () => {
   return (
@@ -26,6 +27,12 @@ const Inquiry = () => {
           </a>
         </div>
       </section>
+
+      {/* Team Section */}
+      <TeamSection className="mt-20" />
+
+      {/* Footer Section */}
+      <FooterSection />
     </div>
   );
 };
