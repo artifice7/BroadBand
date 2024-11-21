@@ -27,7 +27,7 @@ export default function App() {
         />
         <SwiperSlide>
           <div className="relative bg-[#EAEDF4] max-w-[1712px] mx-auto pt-24 px-8 pb-8">
-            <div className="relative mr-10 flex flex-col md:flex-row items-center mt-10 md:mt-10">
+            <div className="relative mr-10 flex flex-col-reverse md:flex-row items-center mt-10 md:mt-10">
               {/* Left Text Content */}
               <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 relative flex flex-col justify-between">
                 {/* Text Paragraph */}

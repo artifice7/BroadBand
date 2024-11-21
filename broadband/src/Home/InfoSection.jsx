@@ -2,7 +2,7 @@ import Button1 from "../Buttons/button1";
 
 const InfoSection = () => {
   return (
-    <section className="flex max-w-[1780px] mx-auto mt-20 flex-col lg:flex-row items-center justify-between p-8 lg:p-16 rounded-lg">
+    <section className="flex max-w-[1780px] mx-auto mt-20 flex-col-reverse lg:flex-row items-center justify-between p-8 lg:p-16 rounded-lg">
       {/* Left Text Section */}
       <div className="lg:w-1/2 space-y-6">
         <h2
@@ -53,7 +53,7 @@ const InfoSection = () => {
       </div>
 
       {/* Right Image Section */}
-      <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center lg:justify-end">
+      <div className="lg:w-1/2 mb-20 mt-8 lg:mt-0 flex justify-center lg:justify-end">
         <img
           src="/About-Last.jpg"
           alt="Girl using internet"
