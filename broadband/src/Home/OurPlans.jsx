@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "./OurPlans.css";
 
 const OurPlans = () => {
   return (
@@ -21,9 +22,10 @@ const OurPlans = () => {
 
       <div className=" relative w-full px-12">
         <Swiper
+          className="custom-swiper"
           modules={[Navigation]}
           navigation={true}
-          spaceBetween={30}
+          spaceBetween={40}
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },

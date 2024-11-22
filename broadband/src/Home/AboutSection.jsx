@@ -1,7 +1,10 @@
 const AboutSection = () => {
   return (
     <section>
-      <h3 className="flex justify-center text-[50px] mt-10 md:mt-10 "style={{ fontFamily: 'MADE Gentle, sans-serif' }}>
+      <h3
+        className="flex justify-center text-[50px]"
+        style={{ fontFamily: "MADE Gentle, sans-serif" }}
+      >
         About Us
       </h3>
       <div className="relative flex flex-col md:flex-row items-center mt-10 md:mt-10">
