@@ -20,7 +20,7 @@ const OurPlans = () => {
         Starting From ₹383 /months* with unlimited data
       </p>
 
-      <div className=" relative w-full px-12">
+      <div className=" relative w-full">
         <Swiper
           className="custom-swiper"
           modules={[Navigation]}
@@ -34,14 +34,14 @@ const OurPlans = () => {
         >
           <SwiperSlide>
             <div
-              className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl transition duration-500 ease-in-out transform
+              className="bg-white min-h-[650px] min-w-[230px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl transition duration-500 ease-in-out transform
                        hover:-translate-y-1 hover:scale-105 hover:border-0"
             >
               {/* Image */}
               <img
                 src="/30 Mbps.png"
                 alt="Plan Image"
-                className="max-w-md h-48 object-cover rounded-t-xl"
+                className="h-48 object-cover rounded-t-xl"
               />
 
               {/* Plan Details */}

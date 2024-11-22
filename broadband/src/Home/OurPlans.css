@@ -18,3 +18,21 @@
 .swiper {
     padding: 0 40px; /* Add space for arrows */
 }
+@media (max-width: 768px) {
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 18px; /* Adjust size of arrows */
+    }
+
+    .swiper {
+        padding: 0 30px; /* Add space for arrows */
+    }
+
+    .swiper-button-next {
+        right: 0; /* Position next button outside the card */
+    }
+
+    .swiper-button-prev {
+        left: 0; /* Position prev button outside the card */
+    }
+}
