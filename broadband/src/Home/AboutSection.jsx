@@ -2,7 +2,7 @@ const AboutSection = () => {
   return (
     <section>
       <h3
-        className="flex justify-center text-[50px]"
+        className="flex justify-center text-3xl sm:text-4xl md:text-5xl"
         style={{ fontFamily: "MADE Gentle, sans-serif" }}
       >
         About Us

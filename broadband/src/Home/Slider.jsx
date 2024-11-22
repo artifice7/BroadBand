@@ -30,13 +30,13 @@ export default function App() {
               <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 flex flex-col justify-between">
                 <div className="flex-1">
                   <h1
-                    className="text-lg sm:text-xl md:text-6xl max-w-[700px] text-black mb-4 z-20"
+                    className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl max-w-[700px] text-black mb-4 z-20"
                     style={{ fontFamily: "MADE Gentle, sans-serif" }}
                   >
                     Now get double speed in{" "}
                     <span className="text-[#050C9C]">single price</span>
                   </h1>
-                  <p className="text-xl sm:text-lg md:text-lg mb-7 max-w-[700px]">
+                  <p className="text-sm sm:text-lg md:text-lg mb-7 max-w-[700px]">
                     Now enjoy uninterrupted broadband Wi-Fi for you and your
                     family at the best-in-class prices and dedicated customer
                     service.
@@ -69,13 +69,13 @@ export default function App() {
               <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 flex flex-col justify-between">
                 <div className="flex-1">
                   <h1
-                    className="text-lg sm:text-xl md:text-6xl max-w-[700px] text-black mb-4 z-20"
+                    className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl max-w-[700px] text-black mb-4 z-20"
                     style={{ fontFamily: "MADE Gentle, sans-serif" }}
                   >
                     Unlimited Wi-fi For{" "}
                     <span className="text-[#050C9C]">Everyone</span>
                   </h1>
-                  <p className="text-xl sm:text-lg md:text-lg mb-7 max-w-[700px]">
+                  <p className="text-sm sm:text-base md:text-lg mb-7 max-w-[700px]">
                     Now enjoy uninterrupted broadband Wi-Fi for you and your
                     family at the best-in-class prices and dedicated customer
                     service.

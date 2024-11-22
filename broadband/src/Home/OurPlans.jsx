@@ -8,15 +8,15 @@ const OurPlans = () => {
   return (
     <section className="py-10 mt-20">
       <h3
-        className="flex justify-center text-[50px] mt-10 md:mt-10 "
+        className="flex justify-center text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-10 "
         style={{ fontFamily: "MADE Gentle, sans-serif" }}
       >
         Our Plans
       </h3>
-      <p className="text-center text-2xl text-gray-500 mb-2">
+      <p className="text-center text-xl sm:text-3xl   md: text-gray-500 mb-2">
         Let&apos;s Discover Our Best Packages
       </p>
-      <p className="text-center text-xl text-blue-500 mb-8">
+      <p className="text-center text-lg sm:text-xl md:text-2xl text-blue-500 mb-8">
         Starting From ₹383 /months* with unlimited data
       </p>
 
@@ -107,7 +107,8 @@ const OurPlans = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl hover:border-0 ">
+            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl transition duration-500 ease-in-out transform
+                       hover:-translate-y-1 hover:scale-105 hover:border-0 ">
               {/* Image */}
               <img
                 src="/50 Mbps.png"
@@ -145,7 +146,8 @@ const OurPlans = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl hover:border-0 ">
+            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl transition duration-500 ease-in-out transform
+                       hover:-translate-y-1 hover:scale-105 hover:border-0 ">
               {/* Image */}
               <img
                 src="/60 Mbps.png"
@@ -183,7 +185,8 @@ const OurPlans = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl hover:border-0 ">
+            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl transition duration-500 ease-in-out transform
+                       hover:-translate-y-1 hover:scale-105 hover:border-0 ">
               {/* Image */}
               <img
                 src="/80 Mbps.png"
@@ -213,7 +216,8 @@ const OurPlans = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl hover:border-0 ">
+            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl transition duration-500 ease-in-out transform
+                       hover:-translate-y-1 hover:scale-105  hover:border-0 ">
               {/* Image */}
               <img
                 src="/100 Mbps.png"
@@ -243,7 +247,8 @@ const OurPlans = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl hover:border-0 ">
+            <div className="bg-white min-h-[650px] rounded-xl relative flex flex-col border-2 border-[#ced4da] hover:shadow-xl transition duration-500 ease-in-out transform
+                       hover:-translate-y-1 hover:scale-105 hover:border-0 ">
               {/* Image */}
               <img
                 src="/200 Mbps.png"
