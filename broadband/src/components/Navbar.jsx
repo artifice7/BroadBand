@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation
 import Button from "../Buttons/button1";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { pathname } = useLocation(); // Get current path
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -14,12 +16,12 @@ const Navbar = () => {
       <nav className="border-gray-200 bg-[#EAEDF4] sticky top-0 z-50 bg-opacity-40 backdrop-blur-md">
         <div className="flex max-w-[1712px] mx-auto flex-wrap items-center justify-between p-4">
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img src="/Main-logo.png" className="h-12" alt="Flowbite Logo" />
-          </a>
+          </Link>
 
           {/* Hamburger Menu */}
           <button
@@ -36,29 +38,35 @@ const Navbar = () => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-semibold flex flex-col md:p-0 p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
               <li className="flex justify-center items-center">
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-Black md:dark:text-blue-500"
+                <Link
+                  to="/"
+                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
+                    pathname === "/" ? "text-blue-700 font-bold" : ""
+                  }`}
                   aria-current="page"
                 >
                   HOME
-                </a>
+                </Link>
               </li>
               <li className="flex justify-center items-center">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-Black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <Link
+                  to="/about"
+                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
+                    pathname === "/about" ? "text-blue-700 font-bold" : ""
+                  }`}
                 >
                   ABOUT US
-                </a>
+                </Link>
               </li>
               <li className="flex justify-center items-center">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-Black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <Link
+                  to="/plans"
+                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
+                    pathname === "/plans" ? "text-blue-700 font-bold" : ""
+                  }`}
                 >
                   OUR PLANS
-                </a>
+                </Link>
               </li>
               <li className="flex justify-center items-center">
                 <Button>CONTACT US</Button>
@@ -85,34 +93,43 @@ const Navbar = () => {
 
         {/* Sidebar Content */}
         <div>
-          <a href="#" className="flex items-center mb-8">
+          <Link to="/" className="flex items-center mb-8">
             <img src="/Main-logo.png" alt="Flowbite Logo" className="h-12" />
-          </a>
+          </Link>
 
           <ul className="space-y-6">
             <li>
-              <a
-                href="#"
-                className="flex justify-between items-center text-lg font-semibold"
+              <Link
+                to="/"
+                className={`flex justify-between items-center text-lg font-semibold ${
+                  pathname === "/" ? "text-blue-700" : "text-gray-700"
+                }`}
+                onClick={toggleSidebar}
               >
                 Home <span className="text-blue-500 text-xl">→</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="flex justify-between items-center text-lg font-semibold"
+              <Link
+                to="/about"
+                className={`flex justify-between items-center text-lg font-semibold ${
+                  pathname === "/about" ? "text-blue-700" : "text-gray-700"
+                }`}
+                onClick={toggleSidebar}
               >
                 About Us <span className="text-blue-500 text-xl">→</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="flex justify-between items-center text-lg font-semibold"
+              <Link
+                to="/plans"
+                className={`flex justify-between items-center text-lg font-semibold ${
+                  pathname === "/plans" ? "text-blue-700" : "text-gray-700"
+                }`}
+                onClick={toggleSidebar}
               >
                 Our Plans <span className="text-blue-500 text-xl">→</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
