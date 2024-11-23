@@ -23,25 +23,25 @@ const InfoSection = () => {
           time. Customer satisfaction is our main goal.
         </p>
         {/* Icons Section */}
-        <div className="flex space-x-8 text-blue-700 mt-4">
+        <div className="flex md:flex-row flex-col md:space-x-8 text-blue-700 mt-4">
           <div className="flex items-center space-x-3">
             <img
               className="w-12 h-12"
               src="/InfoSection/customer_service.png"
               alt="Customer Service Icon"
             />
-            <div className="text-center">
+            <div className="text-left md:text-center">
               <span className="text-2xl font-bold">24 X 7 HR</span>
               <p className="text-md text-black font-medium">Customer Support</p>
             </div>
           </div>
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center mt-5 md:mt-0 space-x-3">
             <img
               className="w-12 h-12"
               src="/InfoSection/wifi.png"
               alt="Wifi Icon"
             />
-            <div className="text-center">
+            <div className="text-left md:text-center">
               <span className="text-2xl font-bold">200+</span>
               <p className="text-md text-black font-medium">
                 Mbps Speed Internet
@@ -57,7 +57,7 @@ const InfoSection = () => {
         <img
           src="/About-Last.jpg"
           alt="Girl using internet"
-          className="rounded-lg w-3/4 h-auto shadow-lg lg:min-h-[550px] object-cover"
+          className="rounded-lg w-4/5 h-auto shadow-lg lg:min-h-[550px] object-cover"
         />
       </div>
     </section>

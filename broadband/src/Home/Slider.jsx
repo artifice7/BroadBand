@@ -17,7 +17,7 @@ export default function App() {
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper bg-[#EAEDF4] "
+        className="mySwiper bg-[#EAEDF4]"
       >
         <link
           href="https://fonts.cdnfonts.com/css/made-gentle"
