@@ -131,7 +131,7 @@ const TeamSection = () => {
               name="months"
               value={formData.months}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 border border-gray-300 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select and Months</option>
             </select>
@@ -139,7 +139,7 @@ const TeamSection = () => {
               name="speed"
               value={formData.speed}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 border border-gray-300 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select and Speed ( Mbps )</option>
             </select>
