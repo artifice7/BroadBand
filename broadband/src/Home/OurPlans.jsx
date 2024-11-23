@@ -3,8 +3,11 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./OurPlans.css";
+import { useNavigate } from "react-router-dom";
 
 const OurPlans = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-10 mt-20">
       <h3
@@ -62,7 +65,10 @@ const OurPlans = () => {
 
               {/* Select Plan Button */}
               <div className="px-4 pb-4">
-                <button className="text-blue-600 font-semibold flex items-center">
+                <button
+                  onClick={() => navigate("/inquiry")}
+                  className="text-blue-600 font-semibold flex items-center"
+                >
                   Select Plan <span className="ml-1">→</span>
                 </button>
               </div>
@@ -99,7 +105,10 @@ const OurPlans = () => {
 
               {/* Select Plan Button */}
               <div className="px-4 pb-4">
-                <button className="text-blue-600 font-semibold flex items-center">
+                <button
+                  onClick={() => navigate("/inquiry")}
+                  className="text-blue-600 font-semibold flex items-center"
+                >
                   Select Plan <span className="ml-1">→</span>
                 </button>
               </div>
@@ -140,7 +149,10 @@ const OurPlans = () => {
 
               {/* Select Plan Button */}
               <div className="px-4 pb-4">
-                <button className="text-blue-600 font-semibold flex items-center">
+                <button
+                  onClick={() => navigate("/inquiry")}
+                  className="text-blue-600 font-semibold flex items-center"
+                >
                   Select Plan <span className="ml-1">→</span>
                 </button>
               </div>
@@ -181,7 +193,10 @@ const OurPlans = () => {
 
               {/* Select Plan Button */}
               <div className="px-4 pb-4">
-                <button className="text-blue-600 font-semibold flex items-center">
+                <button
+                  onClick={() => navigate("/inquiry")}
+                  className="text-blue-600 font-semibold flex items-center"
+                >
                   Select Plan <span className="ml-1">→</span>
                 </button>
               </div>
@@ -214,7 +229,10 @@ const OurPlans = () => {
 
               {/* Select Plan Button */}
               <div className="px-4 pb-4">
-                <button className="text-blue-600 font-semibold flex items-center">
+                <button
+                  onClick={() => navigate("/inquiry")}
+                  className="text-blue-600 font-semibold flex items-center"
+                >
                   Select Plan <span className="ml-1">→</span>
                 </button>
               </div>
@@ -247,7 +265,10 @@ const OurPlans = () => {
 
               {/* Select Plan Button */}
               <div className="px-4 pb-4">
-                <button className="text-blue-600 font-semibold flex items-center">
+                <button
+                  onClick={() => navigate("/inquiry")}
+                  className="text-blue-600 font-semibold flex items-center"
+                >
                   Select Plan <span className="ml-1">→</span>
                 </button>
               </div>
@@ -280,7 +301,10 @@ const OurPlans = () => {
 
               {/* Select Plan Button */}
               <div className="px-4 pb-4">
-                <button className="text-blue-600 font-semibold flex items-center">
+                <button
+                  onClick={() => navigate("/inquiry")}
+                  className="text-blue-600 font-semibold flex items-center"
+                >
                   Select Plan <span className="ml-1">→</span>
                 </button>
               </div>
