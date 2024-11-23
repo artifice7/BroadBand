@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-scroll";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -7,7 +8,7 @@ import Button1 from "../Buttons/button1";
 import "../index.css";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
-export default function App() {
+export default function Slider() {
   return (
     <>
       <Swiper
@@ -42,7 +43,14 @@ export default function App() {
                     service.
                   </p>
                 </div>
-                <Button1>Browse Plans</Button1>
+                <Link
+                  to="our-plans"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer"
+                >
+                  <Button1>Browse Plans</Button1>
+                </Link>
               </div>
               {/* Left Image */}
               <div className="z-30 ml-10 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0">
@@ -55,10 +63,16 @@ export default function App() {
             </div>
             {/* Scroll Down Link */}
             <div className="absolute left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-1 font-medium">
-              <a href="#about" className="scroll-down">
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={-100}
+                className="cursor-pointer"
+              >
                 Scroll Down{" "}
                 <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
-              </a>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -81,7 +95,14 @@ export default function App() {
                     service.
                   </p>
                 </div>
-                <Button1>Browse Plans</Button1>
+                <Link
+                  to="our-plans"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer"
+                >
+                  <Button1>Browse Plans</Button1>
+                </Link>
               </div>
               {/* Left Image */}
               <div className="z-30 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0">
@@ -94,10 +115,16 @@ export default function App() {
             </div>
             {/* Scroll Down Link */}
             <div className="absolute left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-1 font-medium">
-              <a href="#about" className="scroll-down">
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={-100}
+                className="cursor-pointer"
+              >
                 Scroll Down{" "}
                 <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
-              </a>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation
+import { Link, useLocation, useNavigate } from "react-router-dom"; // Import Link and useLocation
 import Button from "../Buttons/button1";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { pathname } = useLocation(); // Get current path
 
@@ -69,7 +70,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="flex justify-center items-center">
-                <Button>CONTACT US</Button>
+                <Button onClick={() => navigate("/inquiry")}>CONTACT US</Button>
               </li>
             </ul>
           </div>
