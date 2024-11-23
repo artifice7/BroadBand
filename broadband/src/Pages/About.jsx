@@ -3,17 +3,16 @@ import AboutSection from "../Home/AboutSection";
 import FiberSection from "../Home/FiberSection";
 import FooterSection from "../Home/FooterSection";
 import InfoSection from "../Home/InfoSection";
-import TeamSection from "../Home/TeamSection";
 
 const About = () => {
   return (
     <>
       <div className="w-full font-poppins">
-        {/* Navbar */}
-        <Navbar />
         {/* About Section */}
-        <section className="h-[91vh] bg-[url('/AboutUsPage.png')] bg-cover bg-center relative">
-          <div className="flex flex-col  relative top-1/3 max-w-[1650px] mx-auto  ">
+        <section className="h-screen bg-[url('/AboutUsPage.png')] bg-cover bg-center relative">
+          {/* Navbar */}
+          <Navbar />
+          <div className="flex flex-col relative top-1/3 max-w-[1650px] mx-auto  ">
             <h1
               className="text-lg sm:text-xl md:text-6xl lg:text-7xl  text-black mb-4 z-20 relative "
               style={{ fontFamily: "MADE Gentle, sans-serif" }}
