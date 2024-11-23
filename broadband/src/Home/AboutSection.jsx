@@ -2,14 +2,14 @@ const AboutSection = () => {
   return (
     <section>
       <h3
-        className="flex justify-center text-[50px]"
+        className="flex justify-center text-center text-[50px]"
         style={{ fontFamily: "MADE Gentle, sans-serif" }}
       >
         About Us
       </h3>
-      <div className="relative flex flex-col md:flex-row items-center mt-10 md:mt-10">
+      <div className="relative flex flex-col xl:flex-row items-center mt-10 md:mt-10">
         {/* Left Image */}
-        <div className="z-30 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0 relative">
+        <div className="z-30 w-full md:w-1/2 xl:w-2/5 mb-8 md:mb-0 relative">
           <img
             src="/About.jpg"
             alt="About Us"
@@ -18,7 +18,7 @@ const AboutSection = () => {
         </div>
 
         {/* Right Text Content */}
-        <div className="w-full md:w-1/2 lg:w-3/5 md:pl-10 text-[#252B42] space-y-6">
+        <div className="w-full md:w-1/2 lg:w-3/5 mt-10 xl:mt-0 md:pl-10 text-[#252B42] space-y-6">
           <p className="text-lg leading-relaxed font-gentle">
             Welcome to AKASH BROADBAND in Porbandar! 🌐 We are committed to
             providing fast, reliable internet services tailored to meet your
