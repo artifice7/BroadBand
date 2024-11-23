@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section>
+    <section id="about">
       <h3
         className="flex justify-center text-[50px]"
         style={{ fontFamily: "MADE Gentle, sans-serif" }}

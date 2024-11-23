@@ -9,7 +9,7 @@ const OurPlans = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-10 mt-20">
+    <section id="our-plans" className="py-10 mt-20">
       <h3
         className="flex justify-center text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-10 "
         style={{ fontFamily: "MADE Gentle, sans-serif" }}
