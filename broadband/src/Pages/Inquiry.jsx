@@ -9,14 +9,14 @@ const Inquiry = () => {
       <section className="h-screen bg-[url('/Inquiry.png')] bg-cover bg-center relative">
         {/* Navbar */}
         <Navbar />
-        <div className="flex flex-col  relative top-1/3 max-w-[1650px] mx-auto  ">
+        <div className="flex flex-col relative top-1/3 pl-5 sm:pl-10 2xl:pl-32  mx-auto   ">
           <h1
-            className="text-lg sm:text-xl md:text-6xl lg:text-7xl  text-black mb-4 z-20 relative "
+            className="ext-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  text-black mb-4 z-20 relative "
             style={{ fontFamily: "MADE Gentle, sans-serif" }}
           >
             Inquiry{" "}
           </h1>
-          <p className="text-xl font-semibold">
+          <p className="text-base sm:text-lg md:text-xl font-semibold">
             For any inquiries, we’re here to assist you with the best support.
           </p>
         </div>
