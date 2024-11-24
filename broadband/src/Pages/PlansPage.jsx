@@ -65,65 +65,65 @@ const plansData = [
   },
 ];
 
-const morePlansData = [
-  {
-    speed: 40,
-    image: "/40 Mbps.png",
-    pricing: {
-      "6 MONTHS": 3300,
-      "12 MONTHS": 5200,
-      "15 MONTHS": 6000,
-    },
-    features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
-  },
-  {
-    speed: 50,
-    image: "/50 Mbps.png",
-    pricing: {
-      "6 MONTHS": 3500,
-      "12 MONTHS": 5550,
-      "15 MONTHS": 7000,
-    },
-    features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
-  },
-  {
-    speed: 60,
-    image: "/60 Mbps.png",
-    pricing: {
-      "6 MONTHS": 3800,
-      "12 MONTHS": 5750,
-      "15 MONTHS": 7250,
-    },
-    features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
-  },
-  {
-    speed: 80,
-    image: "/80 Mbps.png",
-    pricing: {
-      "6 MONTHS": 4050,
-      "12 MONTHS": 6550,
-    },
-    features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
-  },
-  {
-    speed: 100,
-    image: "/100 Mbps.png",
-    pricing: {
-      "6 MONTHS": 4200,
-      "12 MONTHS": 7000,
-    },
-    features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
-  },
-  {
-    speed: 200,
-    image: "/200 Mbps.png",
-    pricing: {
-      "6 MONTHS": 5750,
-      "12 MONTHS": 9999,
-    },
-    features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
-  },
-];
+// const morePlansData = [
+//   {
+//     speed: 40,
+//     image: "/40 Mbps.png",
+//     pricing: {
+//       "6 MONTHS": 3300,
+//       "12 MONTHS": 5200,
+//       "15 MONTHS": 6000,
+//     },
+//     features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
+//   },
+//   {
+//     speed: 50,
+//     image: "/50 Mbps.png",
+//     pricing: {
+//       "6 MONTHS": 3500,
+//       "12 MONTHS": 5550,
+//       "15 MONTHS": 7000,
+//     },
+//     features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
+//   },
+//   {
+//     speed: 60,
+//     image: "/60 Mbps.png",
+//     pricing: {
+//       "6 MONTHS": 3800,
+//       "12 MONTHS": 5750,
+//       "15 MONTHS": 7250,
+//     },
+//     features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
+//   },
+//   {
+//     speed: 80,
+//     image: "/80 Mbps.png",
+//     pricing: {
+//       "6 MONTHS": 4050,
+//       "12 MONTHS": 6550,
+//     },
+//     features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
+//   },
+//   {
+//     speed: 100,
+//     image: "/100 Mbps.png",
+//     pricing: {
+//       "6 MONTHS": 4200,
+//       "12 MONTHS": 7000,
+//     },
+//     features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
+//   },
+//   {
+//     speed: 200,
+//     image: "/200 Mbps.png",
+//     pricing: {
+//       "6 MONTHS": 5750,
+//       "12 MONTHS": 9999,
+//     },
+//     features: "Amazon Prime, Hotstar, Sony Liv, Zee5, Voot, Shemaroo, Playbox",
+//   },
+// ];
 
 const PlansPage = () => {
   const navigate = useNavigate();
@@ -204,7 +204,7 @@ const PlansPage = () => {
         </div>
       </section>
 
-      <section id="more-plans" className="py-16">
+      {/* <section id="more-plans" className="py-16">
         <div className="max-w-[1650px] mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-6">
             Let’s Discover Our Endless Entertainment Package
@@ -259,7 +259,7 @@ const PlansPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer Section */}
       <FooterSection />
