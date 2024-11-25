@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import Button1 from "../Buttons/button1";
 
@@ -10,14 +10,6 @@ const formSchema = z.object({
   speed: z.string().min(1, "Please select a valid speed option"),
 });
 
-const speedOptions = {
-  30: ["6", "12", "15"],
-  40: ["6", "12", "15"],
-  80: ["6", "12"],
-  100: ["6", "12"],
-  200: ["6", "12"],
-};
-
 const TeamSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -28,7 +20,20 @@ const TeamSection = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [plans, setPlans] = useState([]);
+  const [availableSpeeds, setAvailableSpeeds] = useState([]);
   const [availableMonths, setAvailableMonths] = useState([]);
+
+  useEffect(() => {
+    // Fetch the JSON file
+    fetch("/plans.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setPlans(data);
+        setAvailableSpeeds(data.map((plan) => plan.speed));
+      })
+      .catch((error) => console.error("Error fetching plans:", error));
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +45,8 @@ const TeamSection = () => {
     }
 
     if (name === "speed") {
-      setAvailableMonths(speedOptions[value] || []);
+      const selectedPlan = plans.find((plan) => plan.speed === value);
+      setAvailableMonths(selectedPlan?.plans.map((p) => p.duration) || []);
       setFormData((prevData) => ({ ...prevData, months: "" }));
     }
   };
@@ -152,7 +158,7 @@ const TeamSection = () => {
               className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select Speed (Mbps)*</option>
-              {Object.keys(speedOptions).map((speed) => (
+              {availableSpeeds.map((speed) => (
                 <option key={speed} value={speed}>
                   {speed} Mbps
                 </option>
@@ -168,7 +174,7 @@ const TeamSection = () => {
               <option value="">Select Months*</option>
               {availableMonths.map((month) => (
                 <option key={month} value={month}>
-                  {month} Months
+                  {month}
                 </option>
               ))}
             </select>
