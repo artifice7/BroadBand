@@ -64,7 +64,7 @@ const InfoSection = () => {
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="600">
-          <Button1>TRY US FREE</Button1>
+        <Button1 onClick={() => window.location.href = 'tel:+1234567890'}>TRY US FREE</Button1>
         </div>
       </div>
 
