@@ -107,7 +107,8 @@ const AboutSection = () => {
           </p>
           <p className="text-lg mt-4">
             <i className="fas fa-phone-alt text-blue-500 mr-2 transform rotate-90"></i>
-            +91 9328291290, +91 9624340302
+            <a href="tel:+919328291290">+91 9328291290,</a>{" "}
+            <a href="tel:+919624340302">+91 9624340302</a>
           </p>
         </div>
       </div>

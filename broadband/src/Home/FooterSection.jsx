@@ -69,8 +69,12 @@ const FooterSection = () => {
                   <p className="text-lg text-gray-500 font-medium mb-1">
                     Call us 24/7
                   </p>
-                  <p className="text-base text-black">+91 9328291290</p>
-                  <p className="text-base text-black">+91 9624340302</p>
+                  <p className="text-base text-black">
+                    <a href="tel:+919328291290">+91 9328291290</a>
+                  </p>
+                  <p className="text-base text-black">
+                    <a href="tel:+919624340302">+91 9624340302</a>
+                  </p>
                 </div>
               </div>
 

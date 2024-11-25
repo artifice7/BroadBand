@@ -5,7 +5,6 @@ import FooterSection from "../Home/FooterSection";
 import InfoSection from "../Home/InfoSection";
 
 const About = () => {
-  
   return (
     <>
       <div className="w-full font-poppins">

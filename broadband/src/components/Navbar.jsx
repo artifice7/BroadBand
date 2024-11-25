@@ -13,8 +13,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="border-gray-200 bg-[#EAEDF4] sticky top-0 z-50 bg-opacity-40 backdrop-blur-md">
+      {/* Fixed Navbar */}
+      <nav className="border-gray-200 bg-[#EAEDF4] fixed top-0 left-0 w-full z-50 bg-opacity-40 backdrop-blur-md">
         <div className="flex max-w-[1712px] mx-auto flex-wrap items-center justify-between p-4">
           {/* Logo */}
           <Link
@@ -137,7 +137,10 @@ const Navbar = () => {
 
         {/* Contact Us Button */}
         <div className="mt-8">
-          <button className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg flex justify-between items-center px-4">
+          <button
+            onClick={() => navigate("/inquiry")}
+            className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg flex justify-between items-center px-4"
+          >
             Contact Us <span className="text-xl">→</span>
           </button>
         </div>
