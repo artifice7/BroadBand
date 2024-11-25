@@ -21,7 +21,7 @@ const Inquiry = () => {
           </p>
         </div>
         <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-1 font-medium">
-          <a href="#about" className="scroll-down">
+          <a href="#inquiry" className="scroll-down">
             Scroll Down{" "}
             <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
           </a>
