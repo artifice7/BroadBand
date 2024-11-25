@@ -70,7 +70,10 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="flex max-w-[1780px] mx-auto flex-col mt-20 lg:flex-row items-center justify-around p-8 lg:p-16 rounded-lg">
+    <section
+      id="inquiry"
+      className="flex max-w-[1780px] mx-auto flex-col mt-20 lg:flex-row items-center justify-around p-8 lg:p-16 rounded-lg"
+    >
       {/* Left Image Section */}
       <div className="lg:w-1/2 mb-8 lg:mb-0 flex justify-start">
         <div className="relative">
