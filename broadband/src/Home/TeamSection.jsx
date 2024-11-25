@@ -50,12 +50,11 @@ const TeamSection = () => {
     try {
       formSchema.parse(formData);
 
-      const message = `Hi, my name is ${formData.name} and this is my phone number ${formData.phone}, with my mail ${formData.email}, and I want to select ${formData.speed} Mbps plan for ${formData.months} months`;
+      const message = `Hi, my name is ${formData.name} and this is my phone number ${formData.phone}, with my mail ${formData.email}, and I want to know more about ${formData.speed} Mbps plan for ${formData.months} months`;
 
       const encodedMessage = encodeURIComponent(message);
 
-      // Enter Whatsapp Number
-      const whatsappNumber = "+919228233008";
+      const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
       window.open(whatsappURL, "_blank");

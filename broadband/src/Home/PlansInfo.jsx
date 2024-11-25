@@ -3,13 +3,14 @@ const PlansInfo = () => {
     {
       title: "A high-speed router",
       description:
-        "Each plan includes a high-speed router so you get the most out of your internet.",
+        "Each plan includes a free high-speed router so you get the most out of your internet.",
       icon: "/all_plans/router.svg",
       image: "/plan-1.png",
     },
     {
       title: "Expert installation",
-      description: "Expert installation is included with every fiber order.",
+      description:
+        "Expert installation is included with every fiber order for free.",
       icon: "/all_plans/installation.svg",
       image: "/plan-2.png",
     },
