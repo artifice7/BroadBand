@@ -1,5 +1,22 @@
 import { useState } from "react";
+import { z } from "zod";
 import Button1 from "../Buttons/button1";
+
+const formSchema = z.object({
+  name: z.string().min(3, "Name must be at least 3 characters long"),
+  phone: z.string().regex(/^[0-9]{10}$/, "Phone number must be 10 digits"),
+  email: z.string().email("Invalid email address"),
+  months: z.string().min(1, "Please select a valid month option"),
+  speed: z.string().min(1, "Please select a valid speed option"),
+});
+
+const speedOptions = {
+  30: ["6", "12", "15"],
+  40: ["6", "12", "15"],
+  80: ["6", "12"],
+  100: ["6", "12"],
+  200: ["6", "12"],
+};
 
 const TeamSection = () => {
   const [formData, setFormData] = useState({
@@ -10,56 +27,44 @@ const TeamSection = () => {
     speed: "",
   });
 
-  const [errors, setErrors] = useState({
-    name: "",
-    phone: "",
-    email: "",
-  });
+  const [errors, setErrors] = useState({});
+  const [availableMonths, setAvailableMonths] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setFormData((prevData) => ({ ...prevData, [name]: value }));
 
     if (errors[name]) {
       setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
     }
-  };
 
-  const validateForm = () => {
-    let isValid = true;
-    let errors = {};
-
-    if (!formData.name) {
-      errors.name = "Name is required";
-      isValid = false;
+    if (name === "speed") {
+      setAvailableMonths(speedOptions[value] || []);
+      setFormData((prevData) => ({ ...prevData, months: "" }));
     }
-
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!formData.phone) {
-      errors.phone = "Phone is required";
-      isValid = false;
-    } else if (!phoneRegex.test(formData.phone)) {
-      errors.phone = "Phone number must be 10 digits";
-      isValid = false;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email) {
-      errors.email = "Email is required";
-      isValid = false;
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = "Invalid email address";
-      isValid = false;
-    }
-
-    setErrors(errors);
-    return isValid;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      alert("Form submitted successfully");
+    try {
+      formSchema.parse(formData);
+
+      const message = `Hi, my name is ${formData.name} and this is my phone number ${formData.phone}, with my mail ${formData.email}, and I want to select ${formData.speed} Mbps plan for ${formData.months} months`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappNumber = "+919228233008";
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappURL, "_blank");
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const errorMap = error.errors.reduce((acc, err) => {
+          acc[err.path[0]] = err.message;
+          return acc;
+        }, {});
+        setErrors(errorMap);
+      }
     }
   };
 
@@ -128,20 +133,31 @@ const TeamSection = () => {
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <select
-              name="months"
-              value={formData.months}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">Select and Months</option>
-            </select>
-            <select
               name="speed"
               value={formData.speed}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="">Select and Speed ( Mbps )</option>
+              <option value="">Select Speed (Mbps)*</option>
+              {Object.keys(speedOptions).map((speed) => (
+                <option key={speed} value={speed}>
+                  {speed} Mbps
+                </option>
+              ))}
+            </select>
+            <select
+              name="months"
+              value={formData.months}
+              onChange={handleChange}
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              disabled={!availableMonths.length}
+            >
+              <option value="">Select Months*</option>
+              {availableMonths.map((month) => (
+                <option key={month} value={month}>
+                  {month} Months
+                </option>
+              ))}
             </select>
           </div>
           <div className="-translate-x-1.5">

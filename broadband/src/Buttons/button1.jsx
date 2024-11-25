@@ -1,17 +1,18 @@
 import PropTypes from "prop-types";
 import "./button1.css";
 
-const Button = ({ onClick, children }) => {
+const Button1 = ({ type = "button", onClick = () => {}, children }) => {
   return (
-    <button onClick={onClick} className="btn">
+    <button type={type} onClick={onClick} className="btn">
       {children}
     </button>
   );
 };
 
-Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
+Button1.propTypes = {
+  type: PropTypes.string,
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
 
-export default Button;
+export default Button1;

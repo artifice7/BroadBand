@@ -25,7 +25,7 @@ export default function Slider() {
           rel="stylesheet"
         />
         <SwiperSlide>
-          <div className="bg-[#EAEDF4] h-auto max-w-[1712px] mx-auto pt-24 px-8">
+          <div className="bg-[#EAEDF4] h-auto max-w-[1712px] lg:mx-auto lg:pt-24 px-8">
             <div className="mr-10 flex flex-col-reverse md:flex-row items-center mt-10 md:mt-10">
               {/* Left Text Content */}
               <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 flex flex-col justify-between">
@@ -77,7 +77,7 @@ export default function Slider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[#EAEDF4] max-w-[1712px] mx-auto pt-24 px-8">
+          <div className="bg-[#EAEDF4] max-w-[1712px] lg:mx-auto lg:pt-24 px-8">
             <div className="mr-10 flex flex-col-reverse md:flex-row items-center mt-10 md:mt-10">
               {/* Left Text Content */}
               <div className="md:w-1/2 text-left lg:w-3/5 md:pl-10 flex flex-col justify-between">
