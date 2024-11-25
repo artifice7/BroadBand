@@ -16,7 +16,9 @@ const PlansPage = () => {
     // Fetch data from /plans.json
     const fetchPlans = async () => {
       try {
-        const response = await fetch("/plans.json");
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbxQcSjP2kMBYli50Tv6gczzCwSL3mUfv3wJz9LsR9fEwOs3KIRD0N4MfZmlS7yEXPOT/exec",
+        );
         const data = await response.json();
         setPlansData(data);
       } catch (error) {

@@ -15,10 +15,11 @@ const OurPlans = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
 
-    // Fetch JSON data
     const fetchPlans = async () => {
       try {
-        const response = await fetch("/plans.json"); // Ensure the file is in the public folder
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbxQcSjP2kMBYli50Tv6gczzCwSL3mUfv3wJz9LsR9fEwOs3KIRD0N4MfZmlS7yEXPOT/exec",
+        );
         const data = await response.json();
         setPlans(data);
       } catch (error) {
