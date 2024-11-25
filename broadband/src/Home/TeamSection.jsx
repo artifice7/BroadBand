@@ -25,12 +25,13 @@ const TeamSection = () => {
   const [availableMonths, setAvailableMonths] = useState([]);
 
   useEffect(() => {
-    // Fetch the JSON file
-    fetch("/plans.json")
+    fetch(
+      "https://script.google.com/macros/s/AKfycbxQcSjP2kMBYli50Tv6gczzCwSL3mUfv3wJz9LsR9fEwOs3KIRD0N4MfZmlS7yEXPOT/exec",
+    )
       .then((response) => response.json())
       .then((data) => {
         setPlans(data);
-        setAvailableSpeeds(data.map((plan) => plan.speed));
+        setAvailableSpeeds(data.map((plan) => plan.speed)); // Extract available speeds
       })
       .catch((error) => console.error("Error fetching plans:", error));
   }, []);
@@ -45,7 +46,7 @@ const TeamSection = () => {
     }
 
     if (name === "speed") {
-      const selectedPlan = plans.find((plan) => plan.speed === value);
+      const selectedPlan = plans.find((plan) => plan.speed === parseInt(value));
       setAvailableMonths(selectedPlan?.plans.map((p) => p.duration) || []);
       setFormData((prevData) => ({ ...prevData, months: "" }));
     }
