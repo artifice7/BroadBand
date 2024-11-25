@@ -35,10 +35,13 @@ const PlansInfo = () => {
       <h2
         style={{ fontFamily: "MADE Gentle, sans-serif" }}
         className="text-center text-3xl sm:text-4xl md:text-5xl mb-8"
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
         All plans include
       </h2>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6"
+      data-aos="zoom-in-up">
         {plans.map((plan, index) => (
           <div
             key={index}

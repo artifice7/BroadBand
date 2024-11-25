@@ -1,6 +1,9 @@
 import Navbar from "../components/Navbar";
 import FooterSection from "../Home/FooterSection";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const plansData = [
   {
@@ -128,6 +131,10 @@ const plansData = [
 const PlansPage = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="w-full font-poppins">
       {/* About Section */}
@@ -138,10 +145,16 @@ const PlansPage = () => {
           <h1
             className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black mb-4 z-20 relative"
             style={{ fontFamily: "MADE Gentle, sans-serif" }}
+            data-aos="fade-right"
+            data-aos-delay="200"
           >
             Our Plans
           </h1>
-          <p className="text-base sm:text-lg md:text-xl font-semibold">
+          <p
+            className="text-base sm:text-lg md:text-xl font-semibold"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
             For any inquiries, we’re here to assist you with the best support.
           </p>
         </div>
@@ -156,13 +169,18 @@ const PlansPage = () => {
       {/* Our Plans Section */}
       <section id="our-plans" className="py-16">
         <div className="max-w-[1650px] mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-6">
+          <h2 className="text-4xl font-bold text-center mb-6"
+          data-aos="fade-up"
+          data-aos-delay="200">
             Let’s Discover Our Best Packages
           </h2>
-          <p className="text-lg text-center text-[#3672EF] mb-12">
+          <p className="text-lg text-center text-[#3672EF] mb-12"
+          data-aos="fade-up"
+          data-aos-delay="400">
             Starting From ₹383 /month* with unlimited data
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 place-items-center"
+          data-aos="zoom-in-up">
             {/* Map through plansData */}
             {plansData.map((plan, index) => (
               <div

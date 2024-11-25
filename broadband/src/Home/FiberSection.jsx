@@ -21,15 +21,23 @@ const FiberSection = () => {
         <h2
           style={{ fontFamily: "MADE Gentle, sans-serif" }}
           className="text-3xl sm:text-4xl md:text-5xl text-gray-900 mb-2"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
           Future-proof your home with fiber
         </h2>
-        <p className="text-[#3571EF] text-lg sm:text-xl md:text-2xl mb-4">
+        <p
+          className="text-[#3571EF] text-lg sm:text-xl md:text-2xl mb-4"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           As technology advances and your online needs grow, our fiber-optic
           technology has you covered.
         </p>
       </div>
-      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6"
+      data-aos="zoom-in-up"
+      data-aos-delay="200">
         <div className="space-y-6">
           {features.slice(0, 2).map((feature, index) => (
             <div

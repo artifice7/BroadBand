@@ -81,6 +81,8 @@ const TeamSection = () => {
             src="best-team.png"
             alt="Team working together"
             className="md:w-full h-72 md:h-96 xl:h-[500px] object-cover"
+            data-aos="fade-right"
+            data-aos-delay="200"
           />
         </div>
       </div>
@@ -90,10 +92,17 @@ const TeamSection = () => {
         <h2
           style={{ fontFamily: "MADE Gentle, sans-serif" }}
           className="text-2xl lg:text-4xl text-gray-800 mb-20"
+          data-aos="fade-up"
+          data-aos-delay="400"
         >
           We’re committed to providing top-notch service at all times.
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-8"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1">
               <input

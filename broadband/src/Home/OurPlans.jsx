@@ -4,26 +4,44 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./OurPlans.css";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const OurPlans = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
   return (
     <section id="our-plans" className="py-10 mt-20">
       <h3
         className="flex justify-center text-3xl sm:text-4xl md:text-5xl mt-10 md:mt-10 "
         style={{ fontFamily: "MADE Gentle, sans-serif" }}
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
         Our Plans
       </h3>
-      <p className="text-center text-xl sm:text-3xl   md: text-gray-500 mb-2">
+      <p
+        className="text-center text-xl sm:text-3xl   md: text-gray-500 mb-2"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         Let&apos;s Discover Our Best Packages
       </p>
-      <p className="text-center text-lg sm:text-xl md:text-2xl text-blue-500 mb-8">
+      <p
+        className="text-center text-lg sm:text-xl md:text-2xl text-blue-500 mb-8"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         Starting From ₹383 /months* with unlimited data
       </p>
 
-      <div className=" relative w-full">
+      <div className=" relative w-full"
+              data-aos="zoom-in-up">
         <Swiper
           className="custom-swiper"
           modules={[Navigation]}

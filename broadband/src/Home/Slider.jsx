@@ -7,8 +7,15 @@ import "./styles.css";
 import Button1 from "../Buttons/button1";
 import "../index.css";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Slider() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
       <Swiper
@@ -33,11 +40,15 @@ export default function Slider() {
                   <h1
                     className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl max-w-[700px] text-black mb-4 z-20"
                     style={{ fontFamily: "MADE Gentle, sans-serif" }}
+                    data-aos="fade-right"
+                    data-aos-delay="200"
                   >
                     Now get double speed in{" "}
                     <span className="text-[#050C9C]">single price</span>
                   </h1>
-                  <p className="text-sm sm:text-lg md:text-lg mb-7 max-w-[700px]">
+                  <p className="text-sm sm:text-lg md:text-lg mb-7 max-w-[700px]"
+                  data-aos="fade-right"
+                  data-aos-delay="400">
                     Now enjoy uninterrupted broadband Wi-Fi for you and your
                     family at the best-in-class prices and dedicated customer
                     service.
@@ -49,7 +60,10 @@ export default function Slider() {
                   duration={500}
                   className="cursor-pointer"
                 >
+                  <div data-aos="fade-right"
+          data-aos-delay="600">
                   <Button1>Browse Plans</Button1>
+                  </div>
                 </Link>
               </div>
               {/* Left Image */}
@@ -58,6 +72,7 @@ export default function Slider() {
                   src="/V-1.png"
                   alt="About Us"
                   className="w-11/12 h-11/12 rounded-lg z-20"
+                  data-aos="fade-left"
                 />
               </div>
             </div>
