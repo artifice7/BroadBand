@@ -1,15 +1,40 @@
-import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom"; // Import Link and useLocation
-import Button from "../Buttons/button1";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const { pathname } = useLocation(); // Get current path
+  const [dropdownContext, setDropdownContext] = useState(null);
+  const { pathname } = useLocation();
+
+  const dropdownRef = useRef(null);
+  const toggleRef = useRef(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+    setDropdownContext(null);
   };
+
+  const toggleDropdown = (context) => {
+    setDropdownContext(dropdownContext === context ? null : context);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        toggleRef.current &&
+        !toggleRef.current.contains(event.target)
+      ) {
+        setDropdownContext(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -38,17 +63,17 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-semibold flex flex-col md:p-0 p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-              <li className="flex justify-center items-center">
+              <li>
                 <Link
                   to="/"
-                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
+                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ${
                     pathname === "/" ? "text-blue-700 font-bold" : ""
                   }`}
-                  aria-current="page"
                 >
                   HOME
                 </Link>
               </li>
+
               <li className="flex justify-center items-center">
                 <Link
                   to="/about"
@@ -70,7 +95,54 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="flex justify-center items-center">
-                <Button onClick={() => navigate("/inquiry")}>CONTACT US</Button>
+                <Link
+                  to="/inquiry"
+                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
+                    pathname === "/inquiry" ? "text-blue-700 font-bold" : ""
+                  }`}
+                >
+                  CONTACT US
+                </Link>
+              </li>
+              <li className="relative">
+                <button
+                  ref={toggleRef}
+                  onClick={() => toggleDropdown("navbar")}
+                  className="py-2 px-4 bg-blue-500 text-white rounded-lg"
+                >
+                  LOGIN
+                </button>
+                {dropdownContext === "navbar" && (
+                  <div
+                    ref={dropdownRef}
+                    className="absolute top-full mt-2 right-0 w-48 bg-white shadow-lg rounded-lg z-50"
+                  >
+                    <ul className="py-2">
+                      <li>
+                        <a
+                          href="https://www.instagram.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          onClick={() => setDropdownContext(null)}
+                        >
+                          Login
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          onClick={() => setDropdownContext(null)}
+                        >
+                          Sign Up
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
@@ -83,7 +155,6 @@ const Navbar = () => {
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Close Button */}
         <button
           className="absolute top-4 right-4 text-gray-700 text-2xl"
           onClick={toggleSidebar}
@@ -92,7 +163,6 @@ const Navbar = () => {
           &times;
         </button>
 
-        {/* Sidebar Content */}
         <div>
           <Link to="/" className="flex items-center mb-8">
             <img src="/Main-logo.png" alt="Flowbite Logo" className="h-12" />
@@ -132,17 +202,53 @@ const Navbar = () => {
                 Our Plans <span className="text-blue-500 text-xl">→</span>
               </Link>
             </li>
+            <li>
+              <Link
+                to="/inquiry"
+                className={`flex justify-between items-center text-lg font-semibold ${
+                  pathname === "/inquiry" ? "text-blue-700" : "text-gray-700"
+                }`}
+                onClick={toggleSidebar}
+              >
+                Contact Us <span className="text-blue-500 text-xl">→</span>
+              </Link>
+            </li>
           </ul>
         </div>
 
-        {/* Contact Us Button */}
-        <div className="mt-8">
+        <div className="relative" ref={dropdownRef}>
           <button
-            onClick={() => navigate("/inquiry")}
-            className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg flex justify-between items-center px-4"
+            onClick={() => toggleDropdown("sidebar")}
+            className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg"
           >
-            Contact Us <span className="text-xl">→</span>
+            LOGIN
           </button>
+          {dropdownContext === "sidebar" && (
+            <div className="absolute bottom-full mb-2 left-0 w-full bg-white shadow-lg rounded-lg z-50">
+              <ul className="py-2">
+                <li>
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Login
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Sign Up
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </>
