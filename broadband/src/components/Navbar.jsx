@@ -120,24 +120,24 @@ const Navbar = () => {
                     <ul className="py-2">
                       <li>
                         <a
-                          href="https://www.instagram.com"
+                          href="https://customer.charotarbroadband.in/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setDropdownContext(null)}
                         >
-                          Login
+                        Customer Login
                         </a>
                       </li>
                       <li>
                         <a
-                          href="https://www.instagram.com"
+                          href="https://partner.charotarbroadband.in/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setDropdownContext(null)}
                         >
-                          Sign Up
+                           Partner Login
                         </a>
                       </li>
                     </ul>
