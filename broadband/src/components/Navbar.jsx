@@ -104,7 +104,7 @@ const Navbar = () => {
                   CONTACT US
                 </Link>
               </li>
-              <li className="relative">
+{/*               <li className="relative">
                 <button
                   ref={toggleRef}
                   onClick={() => toggleDropdown("navbar")}
@@ -139,7 +139,7 @@ const Navbar = () => {
                         >
                            Partner Login
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 )}
