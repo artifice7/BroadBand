@@ -177,40 +177,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="relative" ref={dropdownRef}>
-          <button
-            onClick={() => toggleDropdown("sidebar")}
-            className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg"
-          >
-            LOGIN
-          </button>
-          {dropdownContext === "sidebar" && (
-            <div className="absolute bottom-full mb-2 left-0 w-full bg-white shadow-lg rounded-lg z-50">
-              <ul className="py-2">
-                <li>
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Login
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Sign Up
-                  </a>
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
+        
       </div>
     </>
   );
