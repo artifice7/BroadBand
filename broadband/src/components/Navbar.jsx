@@ -104,46 +104,7 @@ const Navbar = () => {
                   CONTACT US
                 </Link>
               </li>
-{/* {/*               <li className="relative">
-                <button
-                  ref={toggleRef}
-                  onClick={() => toggleDropdown("navbar")}
-                  className="py-2 px-4 bg-blue-500 text-white rounded-lg"
-                >
-                  LOGIN
-                </button>
-                {dropdownContext === "navbar" && (
-                  <div
-                    ref={dropdownRef}
-                    className="absolute top-full mt-2 right-0 w-48 bg-white shadow-lg rounded-lg z-50"
-                  >
-                    <ul className="py-2">
-                      <li>
-                        <a
-                          href="https://customer.charotarbroadband.in/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setDropdownContext(null)}
-                        >
-                        Customer Login
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://partner.charotarbroadband.in/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setDropdownContext(null)}
-                        >
-                           Partner Login
-                        </a>
-                      </li> */}
-                    </ul>
-                  </div>
-                )}
-              </li> */}
+
             </ul>
           </div>
         </div>
