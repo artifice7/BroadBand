@@ -10,12 +10,7 @@ We are Akash Broadband, a broadband service provider offering high-speed interne
 
 At **Akash Broadband** ("we," "our," "us"), we value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we use your information when you interact with our website or services.
 
-### 1. Your Rights
 
-You have the right to:
-- Access and update your personal information.
-- Request deletion of your personal data.
-- Opt out of marketing communications.
 
 To exercise your rights, please contact us at jsmaher10@gmail.com.
 
