@@ -12,7 +12,7 @@ At **Akash Broadband** ("we," "our," "us"), we value your privacy and are commit
 
 
 
-To exercise your rights, please contact us at jsmaher10@gmail.com.
+To exercise your rights, please contact us at akashbroadbandpbr@gmail.com.
 
 For more detailed information, please refer to our full Privacy Policy on our website.
 
@@ -36,7 +36,7 @@ This project is licensed under the **MIT License**. You are free to use, modify,
 
 For any questions, inquiries, or support, you can reach us via:
 
-- Email: [jsmaher10@gmail.com]
+- Email: [akashbroadbandpbr@gmail.com]
 
 ## Created by Artifice Labs
 
