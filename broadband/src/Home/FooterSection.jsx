@@ -89,7 +89,7 @@ const FooterSection = () => {
                   <p className="text-lg text-gray-500 font-medium mb-1">
                     Email Us
                   </p>
-                  <p className="text-base text-black">jsmaher10@gmail.com</p>
+                  <p className="text-base text-black">akashbroadbandpbr@gmail.com</p>
                 </div>
               </div>
             </div>
