@@ -129,7 +129,13 @@ const Navbar = () => {
 
         <div>
           <Link to="/" className="flex items-center mb-8">
-            <img src="/Main-logo.png" alt="Flowbite Logo" className="h-12" />
+            {/*<img src="/Main-logo.png" alt="Flowbite Logo" className="h-12" />*/}
+
+            <h1 className="h-12 mt-4 font-semibold lg:text-2xl">
+              SUDAMA TELECOM
+              <br />
+              PRIVATE LIMITED
+            </h1>
           </Link>
 
           <ul className="space-y-6">
