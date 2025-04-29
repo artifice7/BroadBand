@@ -2,7 +2,10 @@ import { Instagram } from "react-feather";
 
 const FooterSection = () => {
   const handleInstagramClick = () => {
-    window.open("https://www.instagram.com/akash_broadband_porbandar/", "_blank");
+    window.open(
+      "https://www.instagram.com/akash_broadband_porbandar/",
+      "_blank",
+    );
   };
 
   return (
@@ -89,7 +92,9 @@ const FooterSection = () => {
                   <p className="text-lg text-gray-500 font-medium mb-1">
                     Email Us
                   </p>
-                  <p className="text-base text-black">akashbroadbandpbr@gmail.com</p>
+                  <p className="text-base text-black">
+                    akashbroadbandpbr@gmail.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -116,7 +121,7 @@ const FooterSection = () => {
         </div>
       </div>
       <div className="text-center py-4 bg-[#141928] mt-4 text-white text-md">
-        © 2024 <strong>AKASH BROADBAND </strong> - All rights reserved.
+        © 2024 <strong>SUDAMA TELECOM Pvt. Ltd.</strong> - All rights reserved.
         Website designed and developed by
         <a href="https://www.artificelabs.com" className="font-semibold">
           {" "}
