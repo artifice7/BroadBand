@@ -19,9 +19,9 @@ const InfoSection = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <strong>AKASH BROADBAND Pvt. Ltd.</strong> is one of Gujarat’s leading
+          <strong>SUDAMA TELECOM Pvt. Ltd.</strong> is one of Gujarat’s leading
           high-speed internet providers. Our internet services can reach all
-          households in all the areas of Porbandar. AKASH BROADBAND Pvt. Ltd.
+          households in all the areas of Porbandar. SUDAMA TELECOM Pvt. Ltd.
           provides the best internet plans all over Porbandar with high speeds
           and at reasonable prices. Our customer services are also available for
           all our customers 7 days a week, and we provide the best and most
@@ -64,7 +64,9 @@ const InfoSection = () => {
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="600">
-        <Button1 onClick={() => window.location.href = 'tel:+9624340302'}>Explore</Button1>
+          <Button1 onClick={() => (window.location.href = "tel:+9624340302")}>
+            Explore
+          </Button1>
         </div>
       </div>
 

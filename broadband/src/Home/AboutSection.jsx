@@ -28,11 +28,11 @@ const AboutSection = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Welcome to AKASH BROADBAND in Porbandar! 🌐 We are committed to
-            providing fast, reliable internet services tailored to meet your
-            needs. Our mission is to keep you connected to what matters most,
-            whether you’re working from home 💻, streaming your favorite shows
-            🎬, or enjoying online gaming 🎮.
+            Welcome to SUDAMA TELECOM Pvt. Ltd. in Porbandar! 🌐 We are
+            committed to providing fast, reliable internet services tailored to
+            meet your needs. Our mission is to keep you connected to what
+            matters most, whether you’re working from home 💻, streaming your
+            favorite shows 🎬, or enjoying online gaming 🎮.
           </p>
 
           <h1
@@ -119,9 +119,9 @@ const AboutSection = () => {
           </ul>
 
           <p className="text-lg mt-6" data-aos="fade-up" data-aos-delay="500">
-            Join us at AKASH BROADBAND for seamless connectivity and exceptional
-            service. ✨ Together, let&apos;s make your online experience better
-            than ever!
+            Join us at SUDAMA TELECOM Pvt. Ltd. for seamless connectivity and
+            exceptional service. ✨ Together, let&apos;s make your online
+            experience better than ever!
           </p>
           <p className="text-lg mt-4" data-aos="fade-up" data-aos-delay="600">
             <i className="fas fa-phone-alt text-blue-500 mr-2 transform rotate-90"></i>
