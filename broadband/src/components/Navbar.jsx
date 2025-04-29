@@ -46,7 +46,10 @@ const Navbar = () => {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src="/Main-logo.png" className="h-12" alt="Flowbite Logo" />
+            {/* <img src="/Main-logo.png" className="h-12" alt="Flowbite Logo" /> */}
+            <h1 className="h-12 mt-4 font-semibold text-2xl">
+              SUDAMA TELECOM PRIVATE LIMITED
+            </h1>
           </Link>
 
           {/* Hamburger Menu */}
@@ -104,7 +107,6 @@ const Navbar = () => {
                   CONTACT US
                 </Link>
               </li>
-
             </ul>
           </div>
         </div>
@@ -176,8 +178,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-        
       </div>
     </>
   );
