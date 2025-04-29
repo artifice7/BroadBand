@@ -15,11 +15,15 @@ const FooterSection = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between ">
           {/* Column 1: Contact Details */}
           <div className="w-full lg:border-r-2 pb-8 flex flex-col lg:items-center border-t-2 border-gray-300 pt-8 pr-5 lg:w-1/4 space-y-4">
-            <img
+            {/* <img
               src="/Main-logo.png"
               className="h-12 w-52"
               alt="Flowbite Logo"
-            />
+            /> */}
+
+            <h1 className="h-12 mt-4 font-semibold text-2xl">
+              SUDAMA TELECOM PRIVATE LIMITED
+            </h1>
             <h3 className="text-2xl font-semibold text-black">
               Get In Touch With Us
             </h3>
