@@ -47,8 +47,9 @@ const Navbar = () => {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             {/* <img src="/Main-logo.png" className="h-12" alt="Flowbite Logo" /> */}
-            <h1 className="h-12 mt-4 font-semibold text-2xl">
-              SUDAMA TELECOM PRIVATE LIMITED
+            <h1 className="h-12 mt-4 font-semibold lg:text-2xl">
+              SUDAMA TELECOM
+              <br className="lg:hidden" /> PRIVATE LIMITED
             </h1>
           </Link>
 
