@@ -1,4 +1,7 @@
-const AboutSection = () => {
+import { memo } from "react";
+import { LazyImage } from "../utils/lazyImage.jsx";
+
+const AboutSection = memo(() => {
   return (
     <section id="about">
       <h3
@@ -9,14 +12,14 @@ const AboutSection = () => {
         About Us
       </h3>
       <div className="relative flex flex-col xl:flex-row items-start mt-10 md:mt-10">
-        {/* Left Image */}
+        {/* Left Image - Optimized */}
         <div
           className="z-30 w-full md:w-4/5 xl:w-3/5 mb-8 md:mb-0 self-center relative"
           data-aos="fade-up"
         >
-          <img
+          <LazyImage
             src="/About.jpg"
-            alt="About Us"
+            alt="SUDAMA TELECOM office and team"
             className="w-11/12 h-11/12 rounded-lg shadow-lg relative z-20"
           />
         </div>
@@ -31,25 +34,26 @@ const AboutSection = () => {
             Welcome to SUDAMA TELECOM Pvt. Ltd. in Porbandar! 🌐 We are
             committed to providing fast, reliable internet services tailored to
             meet your needs. Our mission is to keep you connected to what
-            matters most, whether you’re working from home 💻, streaming your
+            matters most, whether you're working from home 💻, streaming your
             favorite shows 🎬, or enjoying online gaming 🎮.
           </p>
 
-          <h1
+          <h2
             className="text-2xl font-bold"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             Why Choose Us?
-          </h1>
+          </h2>
 
           <ul
             className="space-y-4 text-lg"
             data-aos="fade-up"
             data-aos-delay="400"
+            role="list"
           >
-            <li className="flex items-start">
-              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2">
+            <li className="flex items-start" role="listitem">
+              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -65,8 +69,8 @@ const AboutSection = () => {
                 online activities.
               </p>
             </li>
-            <li className="flex items-start">
-              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2">
+            <li className="flex items-start" role="listitem">
+              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -82,8 +86,8 @@ const AboutSection = () => {
                 household&apos;s needs.
               </p>
             </li>
-            <li className="flex items-start">
-              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2">
+            <li className="flex items-start" role="listitem">
+              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -99,8 +103,8 @@ const AboutSection = () => {
                 any queries or issues. 🤝
               </p>
             </li>
-            <li className="flex items-start">
-              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2">
+            <li className="flex items-start" role="listitem">
+              <span className="flex mt-2 items-center justify-center w-4 h-4 bg-blue-600 rounded-full mr-2" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -123,15 +127,17 @@ const AboutSection = () => {
             exceptional service. ✨ Together, let&apos;s make your online
             experience better than ever!
           </p>
-          <p className="text-lg mt-4" data-aos="fade-up" data-aos-delay="600">
-            <i className="fas fa-phone-alt text-blue-500 mr-2 transform rotate-90"></i>
-            <a href="tel:+919328291290">+91 9328291290,</a>{" "}
-            <a href="tel:+919624340302">+91 9624340302</a>
-          </p>
+          <div className="text-lg mt-4" data-aos="fade-up" data-aos-delay="600">
+            <i className="fas fa-phone-alt text-blue-500 mr-2 transform rotate-90" aria-hidden="true"></i>
+            <a href="tel:+919328291290" className="hover:text-blue-600 transition-colors">+91 9328291290</a>{", "}
+            <a href="tel:+919624340302" className="hover:text-blue-600 transition-colors">+91 9624340302</a>
+          </div>
         </div>
       </div>
     </section>
   );
-};
+});
+
+AboutSection.displayName = 'AboutSection';
 
 export default AboutSection;

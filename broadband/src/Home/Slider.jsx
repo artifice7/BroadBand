@@ -7,15 +7,10 @@ import "./styles.css";
 import Button1 from "../Buttons/button1";
 import "../index.css";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { memo } from "react";
 
-export default function Slider() {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
-
+// Memoized component for better performance
+const Slider = memo(() => {
   return (
     <>
       <Swiper
@@ -26,11 +21,8 @@ export default function Slider() {
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper bg-[#EAEDF4]"
+        lazy={true} // Enable lazy loading for swiper
       >
-        <link
-          href="https://fonts.cdnfonts.com/css/made-gentle"
-          rel="stylesheet"
-        />
         <SwiperSlide>
           <div className="bg-[#EAEDF4] h-auto max-w-[1712px] lg:mx-auto lg:pt-24 px-8">
             <div className="mr-10 flex flex-col-reverse md:flex-row items-center mt-10 md:mt-10">
@@ -66,13 +58,16 @@ export default function Slider() {
                   </div>
                 </Link>
               </div>
-              {/* Left Image */}
+              {/* Left Image - Optimized */}
               <div className="z-30 ml-10 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0">
                 <img
                   src="/V-1.png"
-                  alt="About Us"
-                  className="w-11/12 h-11/12 rounded-lg z-20"
+                  alt="Broadband Service Illustration"
+                  className="w-11/12 h-11/12 rounded-lg z-20 critical-image"
                   data-aos="fade-left"
+                  loading="eager" // Critical image, load immediately
+                  decoding="async"
+                  fetchpriority="high"
                 />
               </div>
             </div>
@@ -84,6 +79,7 @@ export default function Slider() {
                 duration={500}
                 offset={-100}
                 className="cursor-pointer"
+                aria-label="Scroll to about section"
               >
                 Scroll Down{" "}
                 <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
@@ -119,12 +115,14 @@ export default function Slider() {
                   <Button1>Browse Plans</Button1>
                 </Link>
               </div>
-              {/* Left Image */}
+              {/* Left Image - Optimized */}
               <div className="z-30 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0">
                 <img
                   src="/V-2.png"
-                  alt="About Us"
+                  alt="WiFi Connection Illustration"
                   className="w-11/12 h-11/12 z-20"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -136,6 +134,7 @@ export default function Slider() {
                 duration={500}
                 offset={-100}
                 className="cursor-pointer"
+                aria-label="Scroll to about section"
               >
                 Scroll Down{" "}
                 <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
@@ -146,4 +145,8 @@ export default function Slider() {
       </Swiper>
     </>
   );
-}
+});
+
+Slider.displayName = 'Slider';
+
+export default Slider;
