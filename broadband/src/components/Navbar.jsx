@@ -108,6 +108,16 @@ const Navbar = () => {
                   CONTACT US
                 </Link>
               </li>
+              {/* <li className="flex justify-center items-center">
+                <Link
+                  to="/privacy-policy"
+                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
+                    pathname === "/privacy-policy" ? "text-blue-700 font-bold" : ""
+                  }`}
+                >
+                  PRIVACY
+                </Link>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -183,6 +193,17 @@ const Navbar = () => {
                 Contact Us <span className="text-blue-500 text-xl">→</span>
               </Link>
             </li>
+            {/* <li>
+              <Link
+                to="/privacy-policy"
+                className={`flex justify-between items-center text-lg font-semibold ${
+                  pathname === "/privacy-policy" ? "text-blue-700" : "text-gray-700"
+                }`}
+                onClick={toggleSidebar}
+              >
+                Privacy Policy <span className="text-blue-500 text-xl">→</span>
+              </Link>
+            </li> */}
           </ul>
         </div>
       </div>

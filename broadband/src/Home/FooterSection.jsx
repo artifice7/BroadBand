@@ -1,4 +1,5 @@
 import { Instagram } from "react-feather";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   const handleInstagramClick = () => {
@@ -43,19 +44,24 @@ const FooterSection = () => {
             <h3 className="text-2xl font-semibold text-black">About Company</h3>
             <ul className="text-sm text-gray-600 space-y-2">
               <li>
-                <a href="#" className="hover:text-blue-500">
+                <Link to="/" className="hover:text-blue-500">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500">
+                <Link to="/about" className="hover:text-blue-500">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500">
+                <Link to="/plans" className="hover:text-blue-500">
                   Our Plans
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy" className="hover:text-blue-500">
+                  Privacy Policy
+                </Link>
               </li>
             </ul>
           </div>
