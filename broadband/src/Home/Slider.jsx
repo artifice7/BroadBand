@@ -7,10 +7,15 @@ import "./styles.css";
 import Button1 from "../Buttons/button1";
 import "../index.css";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-import { memo } from "react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// Memoized component for better performance
-const Slider = memo(() => {
+export default function Slider() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
       <Swiper
@@ -21,8 +26,11 @@ const Slider = memo(() => {
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper bg-[#EAEDF4]"
-        lazy={true} // Enable lazy loading for swiper
       >
+        <link
+          href="https://fonts.cdnfonts.com/css/made-gentle"
+          rel="stylesheet"
+        />
         <SwiperSlide>
           <div className="bg-[#EAEDF4] h-auto max-w-[1712px] lg:mx-auto lg:pt-24 px-8">
             <div className="mr-10 flex flex-col-reverse md:flex-row items-center mt-10 md:mt-10">
@@ -58,16 +66,13 @@ const Slider = memo(() => {
                   </div>
                 </Link>
               </div>
-              {/* Left Image - Optimized */}
+              {/* Left Image */}
               <div className="z-30 ml-10 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0">
                 <img
                   src="/V-1.png"
-                  alt="Broadband Service Illustration"
-                  className="w-11/12 h-11/12 rounded-lg z-20 critical-image"
+                  alt="About Us"
+                  className="w-11/12 h-11/12 rounded-lg z-20"
                   data-aos="fade-left"
-                  loading="eager" // Critical image, load immediately
-                  decoding="async"
-                  fetchpriority="high"
                 />
               </div>
             </div>
@@ -79,7 +84,6 @@ const Slider = memo(() => {
                 duration={500}
                 offset={-100}
                 className="cursor-pointer"
-                aria-label="Scroll to about section"
               >
                 Scroll Down{" "}
                 <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
@@ -115,14 +119,12 @@ const Slider = memo(() => {
                   <Button1>Browse Plans</Button1>
                 </Link>
               </div>
-              {/* Left Image - Optimized */}
+              {/* Left Image */}
               <div className="z-30 w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0">
                 <img
                   src="/V-2.png"
-                  alt="WiFi Connection Illustration"
+                  alt="About Us"
                   className="w-11/12 h-11/12 z-20"
-                  loading="lazy"
-                  decoding="async"
                 />
               </div>
             </div>
@@ -134,7 +136,6 @@ const Slider = memo(() => {
                 duration={500}
                 offset={-100}
                 className="cursor-pointer"
-                aria-label="Scroll to about section"
               >
                 Scroll Down{" "}
                 <i className="fas fa-arrow-down animate-arrow-down text-[#3572EF]" />
@@ -145,8 +146,4 @@ const Slider = memo(() => {
       </Swiper>
     </>
   );
-});
-
-Slider.displayName = 'Slider';
-
-export default Slider;
+}
