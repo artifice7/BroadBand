@@ -5,6 +5,7 @@ import About from "./Pages/About";
 import Inquiry from "./Pages/Inquiry";
 import PlansPage from "./Pages/PlansPage";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import TermsConditions from "./Pages/TermsConditions";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/inquiry" element={<Inquiry />} />
           <Route path="/plans" element={<PlansPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
         </Routes>
       </Router>
       <Analytics />

@@ -63,6 +63,11 @@ const FooterSection = () => {
                   Privacy Policy
                 </Link>
               </li>
+              <li>
+                <Link to="/terms-conditions" className="hover:text-blue-500">
+                  Terms & Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 
